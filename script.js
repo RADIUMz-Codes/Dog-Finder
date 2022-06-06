@@ -6,7 +6,7 @@ $(document).ready(function () {
     $.get('https://dog.ceo/api/breeds/list/all', function (data) {
         let arr = data.message;
         for (var key in arr) {
-            $('#dogs').append(`<option value="${key}">${key}</option>`);
+            $('#dogs').append(`<option value="${key}">${key.toUpperCase()}</option>`);
         }
     });
 
